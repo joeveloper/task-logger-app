@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import LogItem from './LogItem';
-import 'db.json';
+import Preloader from '../layout/Preloader';
 
 const Logs = () => {
-    const [logs, setLogs] = useState([]);
+    const [logs, setLogs] = useState([ ]);
     const [loading, setLoading] = useState(false);
 
    
@@ -21,7 +21,7 @@ const Logs = () => {
     }
 
     if (loading) {
-         return <h4>Loading... </h4>
+         return <Preloader/>
     };
 
   return (
