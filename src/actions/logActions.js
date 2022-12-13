@@ -30,7 +30,7 @@ try {
   dispatch({
     type: LOGS_ERROR,
     payload: err.response.data
-  });
+  })
 }
 };
 
