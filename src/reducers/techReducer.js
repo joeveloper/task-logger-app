@@ -12,7 +12,7 @@ import {
     error: null
   };
   
-  export default (state = initialState, action) => {
+  const techReducer =  (state = initialState, action) => {
     switch (action.type) {
       case GET_TECHS:
         return {
@@ -48,3 +48,6 @@ import {
         return state;
     }
   };
+
+  export default techReducer;
+  

@@ -11,7 +11,7 @@ import {
     try {
       setLoading();
   
-      const res = await fetch('/techs');
+      const res = await fetch('http://localhost:5000/techs');
       const data = await res.json();
   
       dispatch({
@@ -31,7 +31,7 @@ import {
     try {
       setLoading();
   
-      const res = await fetch('/techs', {
+      const res = await fetch('http://localhost:5000/techs', {
         method: 'POST',
         body: JSON.stringify(tech),
         headers: {
@@ -52,11 +52,12 @@ import {
     }
   };
   
+  //delete technician from server
   export const deleteTech = id => async dispatch => {
     try {
       setLoading();
   
-      await fetch(`/techs/${id}`, {
+      await fetch(`http://localhost:5000/techs/${id}`, {
         method: 'DELETE'
       });
   
@@ -78,3 +79,4 @@ import {
       type: SET_LOADING
     };
   };
+  
